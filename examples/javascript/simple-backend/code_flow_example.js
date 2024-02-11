@@ -11,8 +11,8 @@ const port = 3000;
 
 const config = {
   fetch,
-  clientId: 'APP_KEY_HERE',
-  clientSecret: 'APP_SECRET_HERE',
+  clientId: 'znwr7fcgjg880q7',
+  clientSecret: 'eqycteai6htwuci',
 };
 
 const { Dropbox } = require('dropbox'); // eslint-disable-line import/no-unresolved
@@ -45,9 +45,11 @@ app.get('/auth', (req, res) => { // eslint-disable-line no-unused-vars
         });
     })
     .catch((error) => {
+      console.log("Error!")
       console.error(error);
     });
-  res.end();
+ 
+    res.end();
 });
 
 app.listen(port);
